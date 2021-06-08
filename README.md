@@ -1,5 +1,7 @@
 # AWS Cloud Practitioner
 
+# Analytics
+
 # Amazon Athena
 
 Amazon Athena is an interactive serverless 
@@ -35,7 +37,8 @@ amount of data scanned.
 partitioned, or converted into a columnar format.
 
 
-KeyWords: Analyze data in S3, Use standard SQL, ServerLess, Can be integrated with the AWS Glue Data Catalog (Store Metadata) and Amazon Quick Sight (Data Visualization), Charges are applied based on the amount of data scanned.
+KeyWords: Analyze data in S3, Use standard SQL, ServerLess, Can be integrated with the AWS Glue Data Catalog (Store Metadata) and Amazon Quick Sight (Data Visualization), Charges are applied based on the amount of data scanned
+
 
 # Amazon Elasticsearch Service
 
@@ -72,4 +75,90 @@ Pricing details:
 * Charges are applied for each hour of use of EC2 instances and storage volumes attached to the instances.
 * Amazon ES does not charge for data transfer between availability zones.
 
-KeyWords: 
+KeyWords: Managed Service, Launches the Elasticsearch cluster’s with a few clicks, Can be integrated with Kibana and Logstash to provide an enhaced search experience
+
+# Amazon EMR
+
+Amazon EMR (Elastic Map Reduce) is a 
+service used to process and analyze large 
+amounts of data in the cloud using Apache 
+Hive, Hadoop, Apache Flink, Spark, etc.
+
+* The main component of EMR is a cluster that collects Amazon EC2 instances 
+(also known as nodes in EMR).
+* It decouples the compute and storage layer by scaling independently and 
+storing cluster data on Amazon S3.
+* It also controls network access for the instances by configuring instance 
+firewall settings.
+* It offers basic functionalities for maintaining clusters such as monitoring, 
+replacing failed instances, bug fixes, etc.
+* It analyzes machine learning workloads using Apache Spark MLlib and 
+TensorFlow, clickstream workloads using Apache Spark and Apache Hive, and 
+real-time streaming workloads from Amazon Kinesis using Apache Flink.
+* It provides more than one compute instances or containers to process the 
+workloads and can be executed on the following AWS services:
+  * Amazon EC2 
+  * Amazon EKS 
+  * AWS Outposts
+
+It offers basic functionalities for maintaining clusters such as
+
+* Replacing failed instances
+* Monitoring
+* Bug fixes 
+
+KeyWords: Process and analyze large amounts of data, Cluster that collects Amazon EC2 instances, Offers replacing failed instances, monitoring and bug fixes
+
+# Amazon Kinesis Data Streams
+
+Amazon Kinesis Data Streams (KDS) is a 
+scalable real-time data streaming service. It 
+captures gigabytes of data from sources like 
+website clickstreams, events streams 
+(database and location-tracking), and social 
+media feeds. It an alternative to 
+Apache Kafka..
+
+* Kinesis family consists of Kinesis Data Streams, Kinesis 
+Data Analytics, Kinesis Data Firehose, and Kinesis Video 
+Streams.
+* The Real-time data can be fetched from Producers that 
+are Kinesis Streams API, Kinesis Producer Library (KPL), 
+and Kinesis Agent.
+* It allows building custom applications known as Kinesis 
+Data Streams applications (Consumers), which reads 
+data from a data stream as data records.
+* Data Streams are divided into Shards / Partitions whose data 
+retention is 1 day (by default) and can be extended to 7 days
+* Each shard provides a capacity of 1MB per second input data 
+and 2MB per second output data.
+
+KeyWords: Scalable real-time data streaming service, An alternative to Apache Kafka 
+
+# Amazon Kinesis Data Firehose
+
+Amazon Kinesis Data Firehose is a serverless
+service used to capture, transform, and load 
+streaming data into data stores and analytics 
+services.
+
+* It synchronously replicates data across three AZs while 
+delivering them to the destinations.
+* It allows real-time analysis with existing business intelligence 
+tools and helps to transform, batch, compress and encrypt 
+the data before delivering it.
+* It creates a Kinesis Data Firehose delivery stream to send 
+data. Each delivery stream keeps data records for one day. 
+* It has 60 seconds minimum latency or a minimum of 32 MB 
+of data transfer at a time.
+* Kinesis Data Streams, CloudWatch events can be considered 
+as the source(s) to Kinesis Data Firehose.
+
+It delivers streaming data to the following services:
+
+* Amazon S3
+* Splunk
+* Amazon Redshift
+* Amazon Elasticsearch Service
+
+KeyWords: ServerLess, 
