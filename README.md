@@ -1,4 +1,4 @@
-# AWS Cloud Practitioner
+# AWS Cloud Practitioner - Services
 
 # Analytics
 
@@ -161,4 +161,138 @@ It delivers streaming data to the following services:
 * Amazon Redshift
 * Amazon Elasticsearch Service
 
-KeyWords: ServerLess, 
+KeyWords: ServerLess, Real-time analysis with existing business intelligence tools, capture, transform, and load streaming data
+
+# Amazon Managed Streaming for Apache Kafka
+
+Amazon Managed Streaming for Apache Kafka 
+(Amazon MSK) is a managed cluster service 
+used to build and execute Apache Kafka 
+applications for processing streaming data.
+
+It helps to populate machine learning 
+applications, analytical applications, 
+data lakes, and stream changes to and 
+from databases using Apache Kafka 
+APIs
+
+It provides multiple kinds of security 
+for Apache Kafka clusters, including:
+
+* Encryption at Rest 
+* AWS IAM for API Authorization
+* Apache Kafka Access Control Lists (ACLs)
+
+It easily configures applications by removing all the 
+manual tasks used to configure. 
+
+The steps which Amazon MSK manages are:
+* Replacing servers during failures
+* Handling server patches and upgrades with no downtime
+* Maintenance of Apache Kafka clusters
+* Maintenance of Apache ZooKeeper
+* Multi-AZ replication for Apache Kafka clusters
+* Planning scaling events
+
+Amazon MSK Integrates with:
+
+* AWS Glue: To execute Apache Spark job on Amazon MSK cluster
+* Amazon Kinesis Data Analytics: To execute Apache 
+Flink job on Amazon MSK cluster
+* Lambda Functions
+
+KeyWords: Managed Service, Cluster, Helps to populate, Multiple kinds of security
+
+# Amazon Redshift
+
+Amazon Redshift is a fast and petabyte-scale, 
+SQL based data warehouse service used to 
+analyze data easily
+
+Functions of Redshift:
+* It supports Online Analytical Processing (OLAP) type of DB 
+workloads and analyzes them using standard SQL and existing 
+Business Intelligence (BI) tools (AWS QuickSight or Tableau).
+* It is used for executing complex analytic queries on semi-structured 
+and structured data using query optimization, columnar-based 
+storage, and Massively Parallel Query Execution (MPP).
+* Redshift Spectrum helps to directly query from the objects (files) 
+on S3 without actually loading them.
+* It has the capability to automatically copy snapshots (automated 
+or manual) of a cluster to another AWS Region
+
+Pricing details:
+* It offers on-demand pricing that will charge by the hour with 
+no commitments and no upfront costs.
+* Charges are applied based on the type and number of nodes 
+used in the Redshift Cluster.
+* Charged based on the number of bytes scanned by Redshift 
+Spectrum, rounded up to 10MB minimum per query.
+
+KeyWords: Petabyte-scale, SQL based, data warehouse
+
+# AWS Glue
+
+AWS Glue is a serverless ETL (extract, 
+transform, and load) service used to 
+categorize data and move them between 
+various data stores and streams.
+
+Properties of AWS Glue:
+
+* It has a central repository known as the AWS Glue Data Catalog 
+that automatically generates Python or Scala code.
+* It processes semi-structured data using a simple ‘dynamic’ frame in 
+the ETL scripts similar to an Apache Spark data frame that organizes 
+data into rows and columns.
+* It allows organizations to work together and perform data 
+integration tasks, like extraction, normalization, combining, loading, 
+and running ETL workloads. 
+* It supports data integration, preparing and combining data for 
+analytics, machine learning, and other applications’ development.
+* It helps execute the Apache Spark environment’s ETL jobs by 
+discovering data and storing the associated metadata in the AWS Glue 
+Data Catalog.
+* AWS Glue and Spark can be used together by converting dynamic 
+frames and Spark data frames to perform all kinds of analysis.
+
+AWS Glue works with the following services:
+* Redshift - for data warehouses
+* S3 - for data lakes
+* RDS or EC2 instances - for data stores
+
+KeyWords: ServerLess, ETL, central repository, data integration tasks
+
+# AWS Lake Formation
+
+AWS Lake Formation is a cloud service that 
+is used to create, manage and secure data 
+lakes. It automates the complex manual 
+steps required to create data lakes.
+
+A data lake is a secure repository that 
+stores all the data in its original form 
+and is used for analysis.
+
+* Lake Formation is pointed at the data sources, then crawls 
+the sources and moves the data into the new Amazon S3 data 
+lake.
+*  It integrates with AWS Identity and Access Management 
+(IAM) to provide fine-grained access to the data stored in 
+data lakes using a simple grant/revoke process
+
+AWS Lake Formation integrates with:
+* Amazon CloudTrail
+* Amazon CloudWatch
+* Amazon EMR
+* Amazon Glue: Both use same Data Catalog
+* AWS Key Management Service
+* Amazon Redshift Spectrum
+* Amazon Athena: Athena's users can query those AWS Glue 
+catalog which has Lake Formation permissions on them.
+
+KeyWords: Data Lake, secure repository, original form
+
+# Application Integration
+
+# AWS Step Functions
